@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 function ProjectList() {
   return (
-    <div style={{ padding: '20px' }}>
+    <div>
       <h2>Meus Projetos</h2>
 
       <div>
