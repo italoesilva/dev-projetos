@@ -1,16 +1,12 @@
-import { Link } from 'react-router-dom';
-import './Header.css';
+import React from 'react';
+import './Header.css'; // <-- Importa o estilo que você me mandou
 
 function Header() {
   return (
     <header className="header">
       <div className="header-content">
         <h1>Ítalo Oliveira</h1>
-        <p>Desenvolvedor Front-End em formação</p>
-        <nav className="nav-links">
-          <Link to="/">Projetos</Link>
-          <Link to="/tarefas">Lista de Tarefas</Link>
-        </nav>
+        <p>Desenvolvedor Front-End</p>
       </div>
     </header>
   );

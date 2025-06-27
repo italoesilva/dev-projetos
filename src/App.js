@@ -1,19 +1,26 @@
-import { HashRouter, Routes, Route } from 'react-router-dom';
+import React from 'react';
+import { HashRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Header from './components/Header';
-import ProjectList from './components/ProjectList';
-import TodoList from './components/TodoList';
 import Calculator from './components/Calculator';
+import TodoList from './components/TodoList';
+import Home from './components/Home';
+import Projetos from './components/Projetos';
 
 function App() {
   return (
-    <HashRouter>
-      <Header />
-      <Routes>
-        <Route path="/" element={<ProjectList />} />
-        <Route path="/tarefas" element={<TodoList />} />
-        <Route path="/calculadora" element={<Calculator />} />
-      </Routes>
-    </HashRouter>
+    <Router>
+      <div>
+        <Header />
+        <div style={{ padding: '2rem' }}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/projetos" element={<Projetos />} />
+            <Route path="/tarefas" element={<TodoList />} />
+            <Route path="/calculadora" element={<Calculator />} />
+          </Routes>
+        </div>
+      </div>
+    </Router>
   );
 }
 
