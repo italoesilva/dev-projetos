@@ -1,40 +1,158 @@
-
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #2d2b2f; /* fundo preto escuro */
+  color: #eee;               /* texto claro */
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  box-sizing: border-box;
+  text-align: left;
+}
+
+/* Links padrão */
+a, .App-link {
+  color: #00ffe1;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover, .App-link:hover {
+  color: #d40020;
+}
+
+/* Header estilizado */
+.App-header, .header {
+  background: linear-gradient(135deg, #1e1e2f, #3c3c7c);
+  padding: 40px 20px;
   color: white;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  border-radius: 8px;
+  margin-bottom: 40px;
 }
 
-.App-link {
-  color: #61dafb;
+/* Títulos */
+h1, h2, h3, h4 {
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: #eee;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Parágrafos */
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+  color: #ccc;
+}
+
+/* Listas de tecnologias (ex: no card) */
+.tech-list {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0 0 1rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tech-list li {
+  background-color: #272727;
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  color: #00ffe1;
+  box-shadow: 0 0 5px #00ffe1aa;
+}
+
+/* Cards de projeto */
+.card {
+  background-color: #1c1c1c;
+  border: 1px solid #444;
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 20px;
+  color: #eee;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.7);
+}
+
+.card h3 a {
+  color: #00ffe1;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.card h3 a:hover {
+  color: #00d4b3;
+}
+
+.card p, .card ul {
+  margin-bottom: 1rem;
+}
+
+/* Botão simples para “Ver Projeto” */
+.card a {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #585856;
+  color: #0e0e0e;
+  border-radius: 12px;
+  font-weight: 600;
+  transition: background-color 0.3s;
+  text-decoration: none;
+}
+
+.card a:hover {
+  background-color: #00d4b3;
+}
+
+/* Inputs e botões (caso use) */
+input, button, select, textarea {
+  background-color: #222;
+  color: #eee;
+  border: 1px solid #444;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 1rem;
+  font-family: 'Inter', sans-serif;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+input:focus, button:focus, select:focus, textarea:focus {
+  border-color: #00ffe1;
+  box-shadow: 0 0 8px #00ffe1;
+}
+
+/* Responsividade básica */
+@media (max-width: 600px) {
+  .App {
+    padding: 10px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .card {
+    padding: 15px;
+  }
+
+  .tech-list {
+    gap: 5px;
   }
 }
