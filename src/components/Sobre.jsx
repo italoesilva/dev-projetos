@@ -6,13 +6,13 @@ function Sobre() {
     <section className="sobre-container">
       <div className="foto-container">
         <img
-          src="/sua-foto.jpg"  // coloque a foto na pasta public e ajuste o nome aqui
+          src='/italo.jpeg'
           alt="Foto de Ítalo Oliveira"
           className="foto-pessoal"
         />
       </div>
       <div className="info-container">
-        <h2>Meu Currículo</h2>
+        <h2>Perfil Profissional</h2>
         <p>Confira meu currículo atualizado clicando no botão abaixo.</p>
         <a
           href="/curriculo.pdf" // coloque seu PDF na pasta public e ajuste o nome aqui
