@@ -1,5 +1,6 @@
 import React from 'react';
-import './Header.css'; // <-- Importa o estilo que você me mandou
+import { Link } from 'react-router-dom';
+import './Header.css';
 
 function Header() {
   return (
@@ -7,6 +8,11 @@ function Header() {
       <div className="header-content">
         <h1>Ítalo Oliveira</h1>
         <p>Desenvolvedor Front-End</p>
+        <nav className="nav-links">
+          <Link to="/">Home</Link>
+          <Link to="/sobre">Sobre</Link>
+          <Link to="/projetos">Projetos</Link>
+        </nav>
       </div>
     </header>
   );

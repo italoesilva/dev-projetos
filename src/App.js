@@ -5,7 +5,7 @@ import Calculator from './components/Calculator';
 import TodoList from './components/TodoList';
 import Home from './components/Home';
 import Projetos from './components/Projetos';
-import Sobre from './components/Sobre';
+import Sobre from './components/Sobre1'; // Ou seu arquivo Sobre.jsx
 import './App.css';
 
 function App() {
@@ -14,12 +14,12 @@ function App() {
       <div className="App">
         <Header />
         <div style={{ padding: '2rem' }}>
-          <Sobre />
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/sobre" element={<Sobre />} />
             <Route path="/projetos" element={<Projetos />} />
-            <Route path="/tarefas" element={<TodoList />} />
-            <Route path="/calculadora" element={<Calculator />} />
+            <Route path="/projetos/calculadora" element={<Calculator />} />
+            <Route path="/projetos/tarefas" element={<TodoList />} />
           </Routes>
         </div>
       </div>
